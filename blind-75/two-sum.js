@@ -53,6 +53,30 @@ function twoSum(nums, target) {
 
 //With Hashmap:
 
+// Hashmap:
+// [2,7,11,15] target = 9
+// 2: 0
+// 7: 1
+// 11: 2
+// 15: 3
+// target - keyA = value
+// check to see if hashmap has that value
+
+
+const twoSum = (nums, target) => {
+    const map = {}
+    
+    for(let i=0;i<nums.length;i++){
+        map[nums[i]] = i
+    }
+    
+    for(let i=0;i<nums.length;i++){
+        let value = target - nums[i]
+        if (map[value] && map[value] !== i) {
+            return [map[value], i]
+        } 
+    }
+}
 
 
 //TESTCASES--
