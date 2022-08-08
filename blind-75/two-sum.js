@@ -26,12 +26,13 @@ Constraints:
 
 //SOLUTION--
 
-// Without Hashmap:
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
 */
+
+// Without Hashmap:
 
 // I am given an array of integers "num" and I want two integers to add up to be our "target" number
 // So if I have an array nums = [2,7,11,15] and my target is 9, then I can clearly see that 2 + 7 = 9.
@@ -51,7 +52,7 @@ function twoSum(nums, target) {
     }
 }
 
-//With Object:
+// With Object:
 
 // Object "map":
 // [2,7,11,15] target = 9
