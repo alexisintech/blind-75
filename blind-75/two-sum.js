@@ -51,9 +51,9 @@ function twoSum(nums, target) {
     }
 }
 
-//With Hashmap:
+//With Object:
 
-// Hashmap:
+// Object "map":
 // [2,7,11,15] target = 9
 // 2: 0
 // 7: 1
@@ -76,6 +76,21 @@ const twoSum = (nums, target) => {
             return [map[value], i]
         } 
     }
+}
+
+
+// With Map:
+
+const twoSum = (nums, target) => {
+    const map = new Map();
+
+    for(let i=0;i<nums.length;i++){
+        if ( map.has(target - nums[i]) ) {
+            return [map.get(target - nums[i]), i];
+        } else ( map.set(nums[i], i) )
+    }
+        // Map() { value => index }
+    return [];
 }
 
 
