@@ -38,7 +38,7 @@ Constraints:
 
 // Without Map 
 
-const containsDuplicate = nums => {
+var containsDuplicate = nums => {
     let successful = false
     for (let i=0; i < nums.length; i++) {
         for (let j=i+1; j < nums.length; j++) {
@@ -52,7 +52,7 @@ const containsDuplicate = nums => {
 
 // With Map
 
-const containsDuplicate = nums => {
+var containsDuplicate = nums => {
     let map = new Map();
     
     for (let i = 0; i < nums.length; i++) {
