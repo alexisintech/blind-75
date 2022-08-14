@@ -22,7 +22,7 @@ Constraints:
 
 1 <= nums.length <= 105
 -104 <= nums[i] <= 104
-k is in the range [1, the number of unique elements in the array].
+k is in the range [1, the number of unique elements in the array]. -- in other words, k will never be 0
 It is guaranteed that the answer is unique.
 */
 
@@ -32,3 +32,7 @@ It is guaranteed that the answer is unique.
 
 
 //TESTCASES--
+console.log(topKFrequent([1,1,1,2,2,3,4,4,4,4], 1), 'Correct answer: [4]')
+console.log(topKFrequent([1,1,1,2,2,3], 2), 'Correct answer: [1,2]')
+console.log(topKFrequent([1,1,1,2,2,3,4,4,4,4], 2), 'Correct answer: [1,4]')
+console.log(topKFrequent([1,1,5], 2), 'Correct answer: [1]')
