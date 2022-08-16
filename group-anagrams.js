@@ -70,7 +70,7 @@ const groupAnagrams = strs => {
     for (let str of strs) { // for each element in the given array strs
         let sorted = str.split("").sort().join(""); // take that element, split it, sort it alphabetically, and then join it to be one string. store that word as sorted
         if (m.has(sorted)) { // take that sorted word "sorted" and see if our map has it as a key.
-            m.set(sorted, [...m.get(sorted), str]); // if the map has that key, then set the value to be whatever was already in the values (...m.get(sorted)) plus the addition of the current element we're adding (str)
+            m.set(sorted, [...m.get(sorted), str]); // if the map has that key, then set the value to be whatever was already in the values (...m.get(sorted)) plus the addition of the current element we're adding (str) -- its like pushing str to the array
         }
         else { m.set(sorted, [str]); } // if the map does not have the sorted word as a key yet, then set it as a key and add a value --> the original element from the array "str" stored in an array
     }
