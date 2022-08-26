@@ -40,7 +40,7 @@ s consists of parentheses only '()[]{}'.
  * @return {boolean}
  */
 
- var isValid = function(s) {
+var isValid = function(s) {
     let stack = [];
     
     for (let i=0;i<s.length;i++){
