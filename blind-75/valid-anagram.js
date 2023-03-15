@@ -7,15 +7,6 @@
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
-Example 1:
-
-Input: s = "anagram", t = "nagaram"
-Output: true
-Example 2:
-
-Input: s = "rat", t = "car"
-Output: false
  
 
 Constraints:
@@ -24,31 +15,27 @@ Constraints:
 s and t consist of lowercase English letters.
 */
 
+// PSEUDO CODE
 
-//SOLUTION--
-
-// Check if both arrays are same length
-  // If they are, sort them both by alphabetical order
-  // If they aren't, they cannot be anagrams (one has more letters than the other)
-
-// Once sorted, iterate through both to see if they are identical (if they are both sorted in alphabetical, are same length, and contain same exact letters, they can be anagrams)
+// SOLUTION
 
 /**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
+ * @param {string} s 
+ * @param {string} t 
+ * @returns {boolean}
  */
 
 const isAnagram = (s, t) => {
-    if (s.length === t.length) {
-        const string1AsArray = s.split('').sort().join('')
-        const string2AsArray = t.split('').sort().join('')
-        return (string1AsArray == string2AsArray) ? true : false
-    }  else {return false}  
+  if(s.length === t.length){
+    let s1 = s.split("").sort().join("")
+    let t1 = t.split("").sort().join("")
+    return s1 == t1 ? true : false
+  }
+  return false;
 };
 
 
-//TESTCASES--
+// TESTCASES
 console.log(isAnagram('cars', 'racs'), "correct answer: true");
 console.log(isAnagram('cars', 'rats'), "correct answer: false");
 console.log(isAnagram('butterfly', 'flybutter'), "correct answer: true");
